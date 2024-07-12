@@ -18,6 +18,10 @@
   const login = async () => {
     loading.value = true
     try {
+      errors.value = {
+        email: [],
+        password: [],
+      }
       await $auth.login(formData.value)
       await router.push('/')
     } catch (error: any) {

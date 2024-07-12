@@ -39,6 +39,12 @@
   ])
   const addQuotation = async () => {
     try {
+      errors.value = {
+        age: [],
+        currency_id: [],
+        start_date: [],
+        end_date: [],
+      }
       const response = await axios.post('/api/quotation', {
         age: formData.value.age,
         currency_id: formData.value.currency_id,

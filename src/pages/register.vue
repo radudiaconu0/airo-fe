@@ -22,6 +22,12 @@
   const register = async () => {
     loading.value = true
     try {
+      errors.value = {
+        name: [],
+        email: [],
+        password: [],
+        password_confirmation: [],
+      }
       await axios.post('/api/auth/register', formData.value)
       const credentials = {
         email: formData.value.email,

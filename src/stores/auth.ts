@@ -24,6 +24,7 @@ export const useAuthStore = defineStore('auth', {
       if (this.isInitialized) return
 
       axios.defaults.headers.common.Authorization = `Bearer ${this.token}`
+      axios.defaults.headers.common.Accept = 'application/json'
       try {
         await this.fetchUser()
       } catch (error) {

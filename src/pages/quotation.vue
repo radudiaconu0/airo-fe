@@ -112,7 +112,7 @@
                 <v-list-item-subtitle>{{ quotation.currency_id }}</v-list-item-subtitle>
               </v-list-item>
               <v-list-item>
-                <v-list-item-title>Start Date</v-list-item-title>
+                <v-list-item-title>Total</v-list-item-title>
                 <v-list-item-subtitle>{{ quotation.total }}</v-list-item-subtitle>
               </v-list-item>
             </v-list>
